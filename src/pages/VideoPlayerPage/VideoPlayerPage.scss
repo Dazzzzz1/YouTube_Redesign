@@ -1,0 +1,11 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.VideoPlayer_box{
+    display:flex;
+    gap:40px;
+    @media (max-width: 320px){
+        flex-direction: column;
+        gap:20px;
+    }
+}

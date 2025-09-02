@@ -1,0 +1,26 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.menuMedia_box{
+    display: none;
+    margin-top: 25px;
+    @media (max-width: 320px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        width: 320px;
+        height: 61px;
+        border-top: 1px solid $border;
+        .menuMedia_btn{
+            @include textMediaMenu;
+            @include flexCol;
+            align-items: center;
+            gap: 5px;
+            .side_nav_btn_img{
+                color: $menuMedia;
+                opacity: 0.5;
+            }
+        }
+    }
+}

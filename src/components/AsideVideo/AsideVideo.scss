@@ -1,0 +1,39 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.asideVideo_box{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 367px;
+    @media (max-width: 320px){
+        width: 288px;
+        gap: 8px;
+    }
+    .video_box{
+        @media (max-width: 320px){
+            height: 150px;
+        }
+    }
+    .descr_box{
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        .descr_head{
+            @include textBoldH;
+            @media (max-width: 320px){
+              font-size: 16px;
+              gap: 4px;
+            }
+        }
+        .descr_subhead{
+            display: flex;
+            gap: 182px;
+            @include  textSubHead;      
+            @media (max-width: 320px){
+              font-size: 13px;
+              gap: 154px;
+            }
+        }
+    }
+}

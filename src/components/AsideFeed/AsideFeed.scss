@@ -1,0 +1,78 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.AsideFeed_box{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+    @media (max-width: 320px){
+        margin-top: 0px;
+        gap: 13px;
+        align-items: center;
+    }
+    .AsideFeed_head{
+        display: flex;
+        gap: 138px;
+        align-items: end;
+        .AsideFeed_head_next{
+            @include textBoldHeader;
+            @media (max-width: 320px){
+                font-size: 20px;
+                gap: 144px;
+            }
+        }
+        .AsideFeed_head_autoplay{
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            .AsideFeed_head_autoplay_head{
+                @include textMainBold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                @media (max-width: 320px){
+                    font-size: 10px;
+                }
+            }
+            .AsideFeed_head_autoplay_btn{
+                position: relative;
+                width: 44px;
+                height: 28px;
+                background: rgba(235, 235, 235, 0.5);
+                display: inline-block;
+                border-radius: 100px;
+                @media (max-width: 320px){
+                    width: 30px;
+                    height: 19px;
+                }
+            }
+            .AsideFeed_head_autoplay_btn .fill {
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                bottom: 0;
+                border-radius: 20px;
+                background: rgba(33, 150, 243, 1);
+                width: 24px;
+                height: 24px;
+                transition: 0.4s right;
+                @media (max-width: 320px){
+                    width: 16px;
+                    height: 16px;
+                    top: 1.5px;
+                }
+            }
+            .AsideFeed_head_autoplay_btn input {
+                visibility: hidden;
+            }   
+            .AsideFeed_head_autoplay_btn input:checked + span.fill {
+                right: calc(100% - 18px);
+            }
+        }
+    }
+    .asideVodeos_box{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}

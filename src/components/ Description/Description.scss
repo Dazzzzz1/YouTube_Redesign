@@ -1,0 +1,100 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.description{
+     display: flex;
+     flex-direction: row;;
+     gap: 302px;
+     margin-top: 38px;
+     @media (max-width:320px){
+        margin-top: 30px;
+        width: 288px;
+        height: 92px;
+        gap: 52px;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        align-items: center;
+        margin-left: 16px;
+    } 
+    .description_box{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        margin-left: 75px;
+        @media (max-width:320px){
+            gap: 10px;
+            margin-left: 0px;
+        } 
+        .description_avatar{
+            width: 80px;
+            height: 80px;
+            @media (max-width:320px){
+                width: 50px;
+                height: 50px;
+            } 
+        }
+        .description_text{
+            @media (max-width:320px){
+                @include alignCenter;
+                flex-direction: column;
+                justify-content: center;
+            } 
+            .description_text_head{
+                margin-bottom: 4px;
+                @include textBoldH;
+                @media (max-width:320px){
+                    font-size: 16px;
+                    width: 99px;
+                } 
+            }
+            .description_text_date{
+                margin-bottom: 14px;
+                @include textSubMain;
+                @media (max-width:320px){
+                    display: none;
+                } 
+            }
+            .description_text_subscr{
+                display: none;
+                @media (max-width:320px){
+                    display: flex;
+                    @include textSmallSub;
+                } 
+            }
+            .description_text_subhead{
+                margin-bottom: 15px;
+                @include textDesc;
+                width: 820px;
+                height: 88px;
+                @media (max-width:320px){
+                    display: none;
+                } 
+            }
+            .description_text_more{
+                @include textSubMain3;
+                @media (max-width:320px){
+                    display: none;
+                } 
+            }
+        }
+    }
+    .description_subscr{
+        background-color: red;
+        border-radius: 20px;
+        @include textMainSub;
+        @include alignCenter;
+        justify-content: center;
+        width: 154px;
+        height: 40px;
+        @media (max-width:320px){
+            background-color: transparent;
+            color: red;
+        }
+        .description_subscr_amount{
+            margin-left: 5px;
+            @media (max-width:320px){
+                display:none;
+            }
+        } 
+    }
+}
